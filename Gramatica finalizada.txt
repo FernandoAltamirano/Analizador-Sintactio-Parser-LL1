@@ -1,0 +1,127 @@
+
+(1) codigo -> programa$
+(2) programa -> linea Y
+(3)	Y -> programa
+(4)	-> landa
+(5) linea -> declaracion;
+(6)	     ->	asignacion;
+(7)	     ->	condicional
+(8)	     ->	entrada;
+(9)	     ->	salida; 
+
+SD(3)={int, float, double, if, cin, cout, ID}
+SD(4)={$}
+SD(5)={int, float, double}
+SD(6)={ID}
+SD(7)={if}
+SD(8)={cin}
+SD(9)={cout}
+
+(10) declaracion -> tipoD listaDeclaraciones 
+(11) listaDeclaraciones -> ID Resto M
+(12) M-> , listaDeclaraciones
+(13) -> landa
+(14) Resto ->  = num 
+(15)     ->  λ(landa)
+(16) tipoD -> int 
+(17)       -> float 
+(18)       -> double
+
+SD(12)={','}
+SD(13)={';'}
+SD(14)={'='}
+SD(15)={','}
+SD(16)={int}
+SD(17)={float}
+SD(18)={double}
+
+(19) asignacion -> ID L
+(20) L-> = RestoAsignacion
+(21)  -> operadorIncremento
+(22) -> operadorReducido RestoAsignacion         
+(23) operadorIncremento -> ++
+(24)   			-> --
+(25) operadorReducido -> operador =
+(26) RestoAsignacion -> X K
+(27) X -> num
+(28)  -> ID
+(29) K -> operador RestoAsignacion
+(30)  -> landa
+(31) operador -> +
+(32)     -> -
+(33)     -> *
+(34)     -> / 
+
+SD(20)={'='}
+SD(21)={'++','--'}
+SD(22)={'+','-','*','/'}
+SD(23)={'++'}
+SD(24)={--}
+SD(27)={num}
+SD(28)={id}
+SD(29)={'+','-','*','/'}
+SD(30)={';'}
+SD(31)={'+'}
+SD(32)={'-'}
+SD(33)={'*'}
+SD(34)={'/'}
+
+(35) condicional -> if bloqueCondicion bloqueCodigo Z   
+(36)	Z -> else bloqueCodigo
+(37)	 -> landa
+(38) bloqueCondicion -> ( listaCondiciones )
+(39) listaCondiciones   -> condicion  U
+(40)	U -> operadorUnion listaCondiciones
+(41)	  -> landa
+(42) condicion -> ID operadorComparacion num
+(43) operadorComparacion -> <
+(44)   			-> >
+(45)  			-> ==
+(46) 			-> !=
+(47) 			-> >=
+(48) 			-> <= 
+(49) operadorUnion -> &&
+(50)		   -> ||
+(51) bloqueCodigo -> { contenidoBloqueCodigo }
+(52) contenidoBloqueCodigo -> linea Q
+(53)	Q -> contenidoBloqueCodigo 
+(54) 	-> landa                      
+
+SD(36)={else}
+SD(37)={$, int, float, double, if, cin, cout, ID, '}'}
+SD(40)={&&,||}
+SD(41)={')'}
+SD(43) = {<}
+SD(44) = {>}
+SD(45) = {==}
+SD(46) = {!=}
+SD(47) = {>=}
+SD(48) = {<=}
+SD(49) = {&&}
+SD(50) = {||}
+SD(53)={int, float, double, if, cin, cout, ID}
+SD(54)={'}'}
+
+(55) entrada -> cin >> ID T     
+(56) T -> RestoEntrada
+(57) -> landa
+(58) RestoEntrada -> >> ID T    
+
+(59) salida -> cout << operacion W     
+(60) W -> RestoSalida
+(61) -> landa 
+(62) operacion -> ID H
+(63) H-> operador operacion
+(64)  -> landa
+(65) RestoSalida -> << operacion W     
+
+SD(56) = { >> }
+SD(57) = { ';' }
+SD(60) = { << }
+SD(61) = { ';' }
+SD(63) = { +,-,*,/}
+SD(64) = { << }
+
+
+
+

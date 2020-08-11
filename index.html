@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Lenguajes y Compiladores</title>
+</head>
+<body>
+    <header>
+        <h1>ANALIZADOR LEXICOGRÁFICO Y SINTÁCTICO</h1>
+    </header>
+    <div>
+       <div class="container">
+            <div class="select-file">
+                <h2>Subir Archivo</h2>
+                <input type="file" class="inputfile" id="file-input"/>
+            </div>
+            <div class="principal-content grid">
+                    <div class="rpta">
+                        <h3>Contenido del archivo</h3>
+                        <textarea id="contenido-archivo" style="display: none;"></textarea>
+                        <textarea id="contenido-archivo2"></textarea>
+                    </div>
+                    <div class="content-identifiers">
+                        <div class="identifiers">
+                            <div class="itemI default" id = "recognized"><p class="p">Lenguaje Reconocido</p></div>
+                            <div class="itemI default" id = "unrecognized"><p class="p">Lenguaje No Reconocido</p></div>
+                            <div id="button-scan"><p>Detectar lenguaje</p></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <form action="" name="scanner">
+            <input style="display: none;" type="text" id="aux" name="aux">
+            <input style="display: none;" type="text" id="aux2" name="aux2">
+            <textarea style="display:none;" id="uniformed"></textarea>
+            <span id="contenido-archivo2" style="display: none;"></span>
+        </form>
+    <footer class="footer">
+        <h3>INTEGRANTES</h3>
+        <p>Altamirano Alca Fernando</p>
+        <p>Solier Cosser __Ericka</p>
+        <p>Toribio Barrueta Alexis</p>
+    </footer>
+</body>
+<script src="./main2.js"></script>
+</html>
